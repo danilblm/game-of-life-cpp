@@ -4,6 +4,22 @@ Implémentation **console et portable** du *Jeu de la Vie de Conway* en C++ : un
 
 Le rendu se fait avec des **codes ANSI** (pas de `windows.h` / `conio.h`), donc le programme tourne sous **Linux, macOS et tout terminal Windows moderne** (Windows Terminal).
 
+## Aperçu
+
+Sortie réelle du programme (`life 14 7 4 0 glider`) — un **planeur** qui se déplace en diagonale au fil des générations :
+
+```text
+generation 0          generation 1          generation 2          generation 3
+
+. # . . . . .         . . . . . . .         . . . . . . .         . . . . . . .
+. . # . . . .         # . # . . . .         . . # . . . .         . # . . . . .
+# # # . . . .         . # # . . . .         # . # . . . .         . . # # . . .
+. . . . . . .         . # . . . . .         . # # . . . .         . # # . . . .
+. . . . . . .         . . . . . . .         . . . . . . .         . . . . . . .
+```
+
+Avec `random`, la grille s'anime à partir d'une configuration aléatoire et évolue selon les règles ci-dessous.
+
 ## Règles (B3/S23)
 
 - Une cellule **morte** avec exactement **3 voisines vivantes** devient vivante (naissance).
